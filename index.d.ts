@@ -1953,6 +1953,7 @@ declare namespace Eris {
     /** @deprecated */
     addReaction(reaction: string, userID: string): Promise<void>;
     addReaction(reaction: string): Promise<void>;
+    reply(content: MessageContent, file?: MessageFile | MessageFile[]): Promise<Message<TextChannel>>;
     crosspost(): T extends NewsChannel ? Promise<Message<NewsChannel>> : never;
     delete(reason?: string): Promise<void>;
     edit(content: MessageContent): Promise<Message<T>>;
